@@ -6,7 +6,7 @@ GET http://localhost:3001/api/user
 Content-Type: application/json
 
 {
-  "_id": "62fee1ce858fa740c8e245dd" 
+  "_id": "6302b6008adaa56bd90b9440" 
 }
 ###
 //Create User
@@ -14,8 +14,8 @@ POST http://localhost:3001/api/user
 Content-Type: application/json
 
 {
-  "username": "Mushroom",
-  "email": "mgrace4698@gmail.com"
+  "username": "PhilSwift",
+  "email": "patchitphil@flex.org"
 }
 ###
 //Update user 
@@ -23,22 +23,20 @@ PUT  http://localhost:3001/api/user
 Content-Type: application/json
 
 {
-  "_id": "62feece5f525a1899a783cd1",
+  "_id": "6302b6008adaa56bd90b9440",
   "username": "Palmer",
-  "email": "palmersola@yahoo.com"
+  "email": "pfunkaloo13@gmail.com"
 }
 ###
-//Delete use by id
-DELETE   http://localhost:3001/api/user
+//Deleter use by id
+DELETE   http://localhost:3001/api/user/6302b65d886ed0aa0e837b54
 Content-Type: application/json
-
-{
-  "_id": "62fee1ce858fa740c8e245dd",
- 
-}
 ###
 //Add friend to user
-POST http://localhost:3001/api/user/62feece5f525a1899a783cd1/friends/62feed02f525a1899a783cd3
+POST http://localhost:3001/api/user/6302b6008adaa56bd90b9440/friends/6302b62f56934a9cebf36e39
+###
+//Delete friend from user
+DELETE http://localhost:3001/api/user/6302b6008adaa56bd90b9440/friends/6302b62f56934a9cebf36e39
 ###
 //Get all thoughts
 GET http://localhost:3001/api/thoughts
@@ -48,7 +46,7 @@ GET http://localhost:3001/api/thought
 Content-Type: application/json
 
 {
-  "_id": "62ff118f7cab198e96dee3ea" 
+  "_id": "6302b72e886ed0aa0e837b64" 
 }
 ###
 //Create thought
@@ -56,7 +54,7 @@ POST http://localhost:3001/api/thought
 Content-Type: application/json
 
 {
-  "thoughtText": "This is a test thought.",
+  "thoughtText": "ANOTHEEEEER",
   "username": "Palmer"
 }
 ###
@@ -65,17 +63,18 @@ PUT  http://localhost:3001/api/thought
 Content-Type: application/json
 
 {
-  "_id": "62ff118f7cab198e96dee3ea",
+  "_id": "6302b72e886ed0aa0e837b64",
   "thoughtText": "Yeah im a really good programmer",
   "username": "Palmer"
 }
 ###
 //Delete thought
+DELETE   http://localhost:3001/api/thoughts/6302bb96deb3745c0332386d
 
 
 ###
 //Add reaction 
-POST  http://localhost:3001/api/thoughts/62ff118f7cab198e96dee3ea/reactions
+POST  http://localhost:3001/api/thoughts/6302b72e886ed0aa0e837b64/reactions
 Content-Type: application/json
 
 {
@@ -85,4 +84,9 @@ Content-Type: application/json
 
 ###
 //Delete reaction 
-DELETE   http://localhost:3001/api/thoughts/62ff1f621f98c760ae04b85d/reactions
+DELETE   http://localhost:3001/api/thoughts/6302b72e886ed0aa0e837b64/reactions
+Content-Type: application/json
+
+{
+  "reactionId": "6302bbcedeb3745c03323872"
+}
