@@ -1,11 +1,12 @@
-const { ObjectID } = require("bson");
-const { Schema, model } = require("mongoose");
+const { Schema, model, SchemaTypes } = require("mongoose");
 
-const thoughtSchema = new Schema(
+const reactionSchema = new Schema(
   {
-    reactionId: {
-      type: ObjectID,
-      default: new ObjectID()
+    reactionBody: {
+      type: String,
+      required: true,
+      minLength: 1,
+      maxLength: 280
     },
     username: {
       type: String,
@@ -32,9 +33,9 @@ const thoughtSchema = new Schema(
 //   return `${this.friends}`;
 // });
 
-const Thought = model("Thought", thoughtSchema);
+const Reaction = model("Reaction", reactionSchema);
 
-module.exports = Thought;
+module.exports = Reaction;
 
 //   .set(function(val) {
 //     const split = val.trim().split(" ");
