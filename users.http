@@ -6,7 +6,7 @@ GET http://localhost:3001/api/user
 Content-Type: application/json
 
 {
-  "_id": "6302b6008adaa56bd90b9440" 
+  "_id": "6302bf5b2da7b9d802fe0050" 
 }
 ###
 //Create User
@@ -14,8 +14,8 @@ POST http://localhost:3001/api/user
 Content-Type: application/json
 
 {
-  "username": "PhilSwift",
-  "email": "patchitphil@flex.org"
+  "username": "Born2Poo",
+  "email": "forced2wipe@yahoo.com"
 }
 ###
 //Update user 
@@ -23,20 +23,20 @@ PUT  http://localhost:3001/api/user
 Content-Type: application/json
 
 {
-  "_id": "6302b6008adaa56bd90b9440",
+  "_id": "6302bf5b2da7b9d802fe0050",
   "username": "Palmer",
   "email": "pfunkaloo13@gmail.com"
 }
 ###
 //Deleter use by id
-DELETE   http://localhost:3001/api/user/6302b65d886ed0aa0e837b54
+DELETE   http://localhost:3001/api/user/6302bd952ef0d30fcc09e443
 Content-Type: application/json
 ###
 //Add friend to user
-POST http://localhost:3001/api/user/6302b6008adaa56bd90b9440/friends/6302b62f56934a9cebf36e39
+POST http://localhost:3001/api/user/6302b62f56934a9cebf36e39/friends/6302bf5b2da7b9d802fe0050
 ###
 //Delete friend from user
-DELETE http://localhost:3001/api/user/6302b6008adaa56bd90b9440/friends/6302b62f56934a9cebf36e39
+DELETE http://localhost:3001/api/user/6302b62f56934a9cebf36e39/friends/6302bf5b2da7b9d802fe0050
 ###
 //Get all thoughts
 GET http://localhost:3001/api/thoughts
@@ -46,7 +46,7 @@ GET http://localhost:3001/api/thought
 Content-Type: application/json
 
 {
-  "_id": "6302b72e886ed0aa0e837b64" 
+  "_id": "6302bb96deb3745c0332386d" 
 }
 ###
 //Create thought
@@ -54,8 +54,8 @@ POST http://localhost:3001/api/thought
 Content-Type: application/json
 
 {
-  "thoughtText": "ANOTHEEEEER",
-  "username": "Palmer"
+  "thoughtText": "WAHOOO",
+  "username": "Mushroom"
 }
 ###
 //Update thought by id
@@ -63,9 +63,9 @@ PUT  http://localhost:3001/api/thought
 Content-Type: application/json
 
 {
-  "_id": "6302b72e886ed0aa0e837b64",
+  "_id": "6302bb96deb3745c0332386d",
   "thoughtText": "Yeah im a really good programmer",
-  "username": "Palmer"
+  "username": "Mushroom"
 }
 ###
 //Delete thought
@@ -74,19 +74,19 @@ DELETE   http://localhost:3001/api/thoughts/6302bb96deb3745c0332386d
 
 ###
 //Add reaction 
-POST  http://localhost:3001/api/thoughts/6302b72e886ed0aa0e837b64/reactions
+POST  http://localhost:3001/api/thoughts/6302bb96deb3745c0332386d/reactions
 Content-Type: application/json
 
 {
   "reactionBody": "OMG that is so cool",
-  "username": "Mushroom"
+  "username": "Palmer"
 }
 
 ###
 //Delete reaction 
-DELETE   http://localhost:3001/api/thoughts/6302b72e886ed0aa0e837b64/reactions
+DELETE   http://localhost:3001/api/thoughts/6302bb96deb3745c0332386d/reactions
 Content-Type: application/json
 
 {
-  "reactionId": "6302bbcedeb3745c03323872"
+  "reactionId": "6302c0f88f5c4832a62f9013"
 }

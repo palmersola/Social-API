@@ -93,11 +93,11 @@ api_router.post("/thought", async (req, res) => {
 api_router.put("/thought", async (req, res) => {
   const { _id, thoughtText, username } = req.body;
   const thought = await Thought.findOne({ _id: _id });
-  const oldUser = thought.username;
-  if (oldUser !== username) {
-    oldUser.thoughts.pop(thought);
-    oldUser.save();
-  }
+  // const oldUser = thought.username;
+  // if (oldUser !== username) {
+  //   oldUser.thoughts.remove(thought._id);
+  //   oldUser.save();
+  // }
 
   await thought.updateOne({ $set: { thoughtText, username } });
   thought.save();
